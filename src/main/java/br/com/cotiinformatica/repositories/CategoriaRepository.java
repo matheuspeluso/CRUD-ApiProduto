@@ -9,8 +9,10 @@ import br.com.cotiinformatica.factories.ConnectionFactory;
 
 public class CategoriaRepository {
 	
+	private ConnectionFactory connectionFactory = new ConnectionFactory();
+	
 	public List<Categoria> findAll() throws Exception {
-		var connectionFactory = new ConnectionFactory();
+		
 		var connection = connectionFactory.getConnection();
 		
 		var query = """
